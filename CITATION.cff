@@ -1,0 +1,26 @@
+cff-version: "1.2.0"
+type: software
+
+title: "Structural Explainability: Appendix Template"
+version: "0.1.0"
+date-released: "2025-12-31"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+
+repository-code: "https://github.com/structural-explainability/spec-se-appendix"
+license: CC-BY-4.0
+
+keywords:
+  - structural-explainability
+  - appendix
+  - disclosure
+  - provenance
+  - interpretation
+  - attribution
+  - academic-reuse
+  - metadata
+
+message: "Reuse is permitted with attribution; citation is optional and not required for conformance or use."

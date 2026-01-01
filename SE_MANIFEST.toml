@@ -1,0 +1,42 @@
+schema = "se-manifest-1"
+
+[repo]
+name = "spec-se-appendix"
+org = "structural-explainability"
+kind = "informative"
+status = "informative"
+since = "2025"
+summary = "Provides the Structural Explainability (SE) Appendix template."
+
+[layer]
+space = "SE"
+role = "appendix-template"
+
+[depends]
+required = ["structural-explainability/spec-se@v1"]
+optional = []
+
+[provides]
+artifacts = ["APPENDIX_TEMPLATE.md", "README.md", "CITATION.cff"]
+
+[scope]
+includes = ["appendix template for SE-aligned disclosures"]
+excludes = [
+  "new normative constraints beyond spec-se",
+  "domain vocabularies",
+  "epistemic evaluation",
+  "causal explanations",
+  "normative judgment or enforcement",
+  "identity-and-persistence regime rules",
+  "graph evolution semantics",
+  "interpretation boundary rules",
+  "governance boundary rules",
+]
+
+[citation]
+cff = "CITATION.cff"
+preferred = "informative"
+bib_hint = "case2025-spec-se-appendix"
+
+[traceability]
+identifier_map = "none"
