@@ -26,11 +26,7 @@ excludes = [
   "domain vocabularies",
   "epistemic evaluation",
   "causal explanations",
-  "normative judgment or enforcement",
-  "identity-and-persistence regime rules",
-  "graph evolution semantics",
-  "interpretation boundary rules",
-  "governance boundary rules",
+  "normative judgment or enforcement"
 ]
 
 [citation]
