@@ -1,7 +1,7 @@
 # Structural Explainability: Appendix Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
-![Build Status](https://github.com/structural-explainability/spec-se-appendix/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/structural-explainability/spec-se-appendix/actions/workflows/ci-hygiene.yml/badge.svg?branch=main)
 [![Check Links](https://github.com/structural-explainability/spec-se-appendix/actions/workflows/links.yml/badge.svg)](https://github.com/structural-explainability/spec-se-appendix/actions/workflows/links.yml)
 
 > Structural Explainability Appendix Template.
@@ -32,3 +32,24 @@ The appendix template is intended for use alongside SE-conformant artifacts,
 including specifications, formalizations, papers, datasets, and repositories.
 
 It does **not** define domain semantics, evaluation criteria, or enforcement rules.
+
+## Developer (running pre-commit)
+
+Steps to run pre-commit locally. Install `uv`.
+
+Initialize once:
+
+```shell
+uv self update
+uvx pre-commit install
+uvx pre-commit run --all-files
+```
+
+Save progress as needed:
+
+```shell
+git add -A
+# If pre-commit makes changes, re-run `git add -A` before committing.
+git commit -m "update"
+git push -u origin main
+```
