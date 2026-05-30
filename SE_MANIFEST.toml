@@ -1,51 +1,60 @@
 # ============================================================
-# SE_MANIFEST.toml (Repository Intent, Scope, and Role)
+# SE_MANIFEST.toml (Repository Declaration)
 # ============================================================
 
-schema = "se-manifest-1"
-schema_url = "https://github.com/structural-explainability/spec-se/blob/main/manifests/se-manifest-1.md"
+schema = "se-manifest-schema"
+schema_url = "https://raw.githubusercontent.com/structural-explainability/se-manifest-schema/main/manifest-schema.toml"
+
+# === Framework Context ===
 
 [meta]
-# Non-normative contextual information
 framework = "Structural Explainability"
 framework_url = "https://github.com/structural-explainability"
-framework_note = "Provides definitions and conventions for SE_MANIFEST semantics."
-description = "Declarative claim of repository intent, scope, and role."
-purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
+purpose = "Declares this repository's role in the Structural Explainability ecosystem."
+
+# === Repository Identity ===
 
 [repo]
 name = "spec-se-appendix"
 org = "structural-explainability"
+class = "spec"
 kind = "informative"
 status = "informative"
 since = "2025"
 summary = "Provides the Structural Explainability (SE) Appendix template."
 
+# === Layer Position ===
+
 [layer]
-space = "SE"
-role = "appendix-template"
+space = "structural-explainability"
+role  = "specification"
+
+# === Dependency Declarations ===
 
 [depends]
-required = ["structural-explainability/spec-se@v1"]
+required = [{ repo = "spec-se", kind = "semantic", version = "v1" }]
 optional = []
+
+# === Provided Artifacts ===
 
 [provides]
 artifacts = ["APPENDIX_TEMPLATE.md", "README.md", "CITATION.cff"]
 
+# === Scope ===
+
 [scope]
 includes = ["appendix template for SE-aligned disclosures"]
 excludes = [
-  "new normative constraints beyond spec-se",
-  "domain vocabularies",
-  "epistemic evaluation",
-  "causal explanations",
-  "normative judgment or enforcement"
+    "new normative constraints beyond spec-se",
+    "domain vocabularies",
+    "epistemic evaluation",
+    "causal explanations",
+    "normative judgment or enforcement",
 ]
 
 [citation]
 cff = "CITATION.cff"
 preferred = "informative"
-bib_hint = "case2025-spec-se-appendix"
 
 [traceability]
 identifier_map = "none"
